@@ -14,4 +14,5 @@ import lombok.ToString;
 @ToString
 public class Demo2 {
     private String id;
+    private String name;
 }

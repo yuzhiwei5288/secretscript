@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ace.secretscript.mapper.demo.DemoMapper">
+
+    <sql id="aceDemo">
+        "ACE_DEMO" T
+    </sql>
+
+    <sql id="aceDemoColumns">
+        T."ID",
+        T."NAME",
+        T."DATE"
+    </sql>
+
+    <sql id="aceDemoValue">
+        #{id},
+        #{name},
+        #{date}
+    </sql>
+
+    <select id="getList" resultType="demo">
+        SELECT
+        <include refid="aceDemoColumns"></include>
+        FROM
+        <include refid="aceDemo"></include>
+        WHERE
+        1=1
+    </select>
+
+    <insert id="insert" parameterType="demo">
+        INSERT INTO
+        <include refid="aceDemo"></include>
+        (
+        <include refid="aceDemoColumns"></include>
+        )
+        VALUES (
+        <include refid="aceDemoValue"></include>
+        )
+    </insert>
+
+</mapper>

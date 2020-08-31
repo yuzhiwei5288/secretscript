@@ -23,5 +23,5 @@ public class Demo {
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date date;
 
-    private Demo2 demo2;
+//    private Demo2 demo2;
 }

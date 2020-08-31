@@ -1,6 +1,6 @@
 package com.ace.secretscript.druid;
 
-import com.ace.secretscript.util.LoggerUtil;
+import com.ace.secretscript.common.util.LoggerUtil;
 import com.alibaba.druid.filter.Filter;
 import com.alibaba.druid.pool.DruidDataSource;
 import com.alibaba.druid.support.http.StatViewServlet;

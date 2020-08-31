@@ -1,4 +1,4 @@
-package com.ace.secretscript.util;
+package com.ace.secretscript.common.util;
 
 import org.slf4j.LoggerFactory;
 

@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.ace.secretscript.mapper.demo.DemoMapper">
+<mapper namespace="com.ace.secretscript.mapper.ace.DemoMapper">
 
     <sql id="aceDemo">
         "ACE_DEMO" T
@@ -21,13 +21,20 @@
         #{date}
     </sql>
 
-    <select id="getList" resultType="demo">
+    <select id="getList" parameterType="com.ace.secretscript.entity.Demo" resultType="demo">
         SELECT
         <include refid="aceDemoColumns"></include>
         FROM
         <include refid="aceDemo"></include>
         WHERE
         1=1
+        <if test="name!=null and name!=''">
+            AND
+            T."NAME" = #{name}
+        </if>
+<!--        <if test="demo2.name!=null and demo2.name!=''">-->
+<!--            T."NAME" = #{demo2.name}-->
+<!--        </if>-->
     </select>
 
     <insert id="insert" parameterType="demo">

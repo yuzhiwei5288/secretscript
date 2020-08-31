@@ -1,8 +1,8 @@
-package com.ace.secretscript.service.demo.impl;
+package com.ace.secretscript.service.ace.impl;
 
 import com.ace.secretscript.entity.Demo;
-import com.ace.secretscript.mapper.demo.DemoMapper;
-import com.ace.secretscript.service.demo.DemoService;
+import com.ace.secretscript.mapper.ace.DemoMapper;
+import com.ace.secretscript.service.ace.DemoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -17,8 +17,8 @@ public class DemoServiceImpl implements DemoService {
     private DemoMapper demoMapper;
 
     @Override
-    public List<Demo> getList() {
-        List<Demo> list = this.demoMapper.getList();
+    public List<Demo> getList(Demo demo) {
+        List<Demo> list = this.demoMapper.getList(demo);
         return list;
     }
 

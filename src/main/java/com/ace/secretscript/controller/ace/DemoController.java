@@ -1,8 +1,10 @@
-package com.ace.secretscript.controller.demo;
+package com.ace.secretscript.controller.ace;
 
+import com.ace.secretscript.common.service.redis.RedisService;
+import com.ace.secretscript.common.util.LoggerUtil;
 import com.ace.secretscript.entity.Demo;
-import com.ace.secretscript.service.demo.DemoService;
-import com.ace.secretscript.util.LoggerUtil;
+import com.ace.secretscript.service.ace.DemoService;
+import com.alibaba.fastjson.JSON;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -27,11 +29,18 @@ public class DemoController {
     @Autowired
     private DemoService demoService;
 
+    @Autowired
+    private RedisService redisService;
+
     @GetMapping("demo")
     public String getDemo(Demo demo) {
-        String sDemo = demo.toString();
-        System.out.println(sDemo);
-        List<Demo> list = this.demoService.getList();
+        String jsonDemo = JSON.toJSONString(demo);
+        redisService.set("jsonDemo",jsonDemo);
+        String stringDemo = demo.toString();
+        System.out.println(stringDemo);
+        System.out.println(jsonDemo);
+        List<Demo> list = this.demoService.getList(demo);
+        redisService.set("demoList",JSON.toJSONString(list));
         return list.toString();
     }
 
@@ -57,7 +66,7 @@ public class DemoController {
                 reponse.sendRedirect("http://localhost:6789/#/login?username=" + username);
             }
         } catch (Exception e) {
-            LoggerUtil.error("gg---", e);
+            LoggerUtil.error("gg--炸了", e);
 //            e.printStackTrace();
         }
     }

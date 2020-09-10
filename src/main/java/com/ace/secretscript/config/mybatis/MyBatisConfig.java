@@ -19,7 +19,7 @@ import javax.sql.DataSource;
 import java.util.Properties;
 
 /**
- * @author 西野
+ * @author ace
  * @version V1.0
  * @title MyBatisConfig.java
  * @package com.xiye.system.config.mybatis

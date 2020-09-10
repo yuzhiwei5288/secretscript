@@ -2,7 +2,7 @@ package com.ace.secretscript.common.util;
 
 
 /**
- * @author 西野
+ * @author ace
  * @version V1.0
  * @title Const.java
  * @package com.xiye.common.util

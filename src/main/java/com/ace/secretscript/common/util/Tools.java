@@ -14,7 +14,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * @author 西野
+ * @author ace
  * @version V1.0
  * @title Tools.java
  * @package com.xiye.common.util
@@ -25,7 +25,7 @@ public class Tools {
     protected final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     /**
-     * @Author 西野
+     * @Author ace
      * @Date 2020-03-27 16:34:06
      * @Description java.security.SecureRandom真随机数
      * 系统将确定在所请求的包中是否有算法实现；如果没有，则抛出异常NoSuchProviderException
@@ -41,7 +41,7 @@ public class Tools {
     }
 
     /**
-     * @Author 西野
+     * @Author ace
      * @Date 2020-03-27 16:34:18
      * @Description 检测字符串是否不为空(null, " ", " null ")
      * @Param [s]
@@ -52,7 +52,7 @@ public class Tools {
     }
 
     /**
-     * @Author 西野
+     * @Author ace
      * @Date 2020-03-27 16:34:31
      * @Description 检测字符串是否为空(null, " ", " null ")
      * @Param [s]
@@ -63,7 +63,7 @@ public class Tools {
     }
 
     /**
-     * @Author 西野
+     * @Author ace
      * @Date 2020-03-27 16:34:42
      * @Description 字符串转换为字符串数组
      * @Param [str, splitRegex] str 字符串;splitRegex 分隔符
@@ -77,7 +77,7 @@ public class Tools {
     }
 
     /**
-     * @Author 西野
+     * @Author ace
      * @Date 2020-03-27 16:35:01
      * @Description 用默认的分隔符(, )将字符串转换为字符串数组
      * @Param [str] str 字符串
@@ -88,7 +88,7 @@ public class Tools {
     }
 
     /**
-     * @Author 西野
+     * @Author ace
      * @Date 2020-03-27 16:35:31
      * @Description 按照参数format的格式，日期转字符串
      * @Param [date, format]
@@ -104,7 +104,7 @@ public class Tools {
     }
 
     /**
-     * @Author 西野
+     * @Author ace
      * @Date 2020-03-27 16:36:42
      * @Description 验证邮箱
      * @Param [email]
@@ -125,7 +125,7 @@ public class Tools {
     }
 
     /**
-     * @Author 西野
+     * @Author ace
      * @Date 2020-03-27 22:56:28
      * @Description Iterable的工具类，用来处理给jdk1.8的lambda表达式forEach增加序列
      * @Param [elements, action]
@@ -140,7 +140,7 @@ public class Tools {
         }
     }
     /**
-     * @Author 西野
+     * @Author ace
      * @Date 2020-03-27 09:52:31
      * @Description 得到32位的uuid
      * @Param []

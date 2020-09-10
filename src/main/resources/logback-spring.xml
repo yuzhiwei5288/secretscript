@@ -9,7 +9,7 @@
     <jmxConfigurator/>
     <!-- 定义日志文件 输出位置 -->
     <!-- <property name="LOG_HOME" value="C:/test" /> -->
-    <property name="LOG_HOME" value="/xiye_log"/>
+    <property name="LOG_HOME" value="/ace_log"/>
     <!-- 日志最大的历史 30天 -->
     <property name="maxHistory" value="30"/>
 

@@ -31,7 +31,7 @@ import java.util.List;
 import java.util.Properties;
 
 /**
- * @author 西野
+ * @author ace
  * @version V1.0
  * @title PagePlugin.java
  * @package com.xiye.common.plugin
@@ -124,7 +124,7 @@ public class PagePlugin implements Interceptor {
     }
 
     /**
-     * @Author 西野
+     * @Author ace
      * @Date 2020-03-27 16:25:08
      * @Description 对SQL参数(?)设值, 参考org.apache.ibatis.executor.parameter.DefaultParameterHandler
      * @Param [ps, mappedStatement, boundSql, parameterObject]
@@ -168,7 +168,7 @@ public class PagePlugin implements Interceptor {
     }
 
     /**
-     * @Author 西野
+     * @Author ace
      * @Date 2020-03-27 16:25:18
      * @Description 根据数据库方言，生成特定的分页sql
      * @Param [sql, page]

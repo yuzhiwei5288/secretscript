@@ -5,7 +5,7 @@ import org.jasypt.encryption.pbe.PooledPBEStringEncryptor;
 import org.jasypt.encryption.pbe.config.SimpleStringPBEConfig;
 
 /**
- * @author 西野
+ * @author ace
  * @version V1.0
  * @title JasyptUtil.java
  * @package com.xiye.common.util

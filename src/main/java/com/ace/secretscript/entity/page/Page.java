@@ -6,7 +6,7 @@ import com.ace.secretscript.common.util.Const;
 import java.io.Serializable;
 
 /**
- * @author 西野
+ * @author ace
  * @version V1.0
  * @title Page.java
  * @package com.xiye.common.entity.page

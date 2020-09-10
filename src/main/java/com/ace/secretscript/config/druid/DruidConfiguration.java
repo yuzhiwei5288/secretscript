@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author 西野
+ * @author ace
  * @version V1.0
  * @title DruidConfiguration.java
  * @package com.xiye.system.com.ace.secretscript.config.druid

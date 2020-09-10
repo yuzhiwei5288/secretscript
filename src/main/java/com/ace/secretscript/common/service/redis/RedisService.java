@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * @author 西野
+ * @author ace
  * @version V1.0
  * @title RedisService.java
  * @package com.xiye.xykc.service.redis
@@ -18,7 +18,7 @@ public interface RedisService {
      *
      * @param key
      * @return byte[]
-     * @author 西野
+     * @author ace
      * @date 2020-05-06 13:06:07
      */
     byte[] get(byte[] key);
@@ -28,7 +28,7 @@ public interface RedisService {
      *
      * @param key
      * @return java.lang.String
-     * @author 西野
+     * @author ace
      * @date 2020-05-06 13:06:07
      */
     String get(String key);
@@ -38,7 +38,7 @@ public interface RedisService {
      *
      * @param key,value
      * @return byte[]
-     * @author 西野
+     * @author ace
      * @date 2020-05-06 13:06:07
      */
     byte[] set(byte[] key, byte[] value);
@@ -48,7 +48,7 @@ public interface RedisService {
      *
      * @param key,value
      * @return void
-     * @author 西野
+     * @author ace
      * @date 2020-05-06 13:06:07
      */
     void addList(String key, List<String> list);
@@ -58,7 +58,7 @@ public interface RedisService {
      *
      * @param key,value
      * @return void
-     * @author 西野
+     * @author ace
      * @date 2020-05-06 13:06:07
      */
     void replaceList(String key, List<String> list);
@@ -68,7 +68,7 @@ public interface RedisService {
      *
      * @param key
      * @return java.util.List<java.lang.String>
-     * @author 西野
+     * @author ace
      * @date 2020-05-06 13:06:07
      */
     List<String> getList(String key);
@@ -78,7 +78,7 @@ public interface RedisService {
      *
      * @param key
      * @return java.lang.String
-     * @author 西野
+     * @author ace
      * @date 2020-05-06 13:06:07
      */
     String set(String key, String value);
@@ -88,7 +88,7 @@ public interface RedisService {
      *
      * @param key,value,expire
      * @return byte[]
-     * @author 西野
+     * @author ace
      * @date 2020-05-06 13:06:07
      */
     byte[] set(byte[] key, byte[] value, int expire);
@@ -98,7 +98,7 @@ public interface RedisService {
      *
      * @param key,value,expire
      * @return java.lang.String
-     * @author 西野
+     * @author ace
      * @date 2020-05-06 13:06:07
      */
     String set(String key, String value, int expire);
@@ -108,7 +108,7 @@ public interface RedisService {
      *
      * @param key
      * @return void
-     * @author 西野
+     * @author ace
      * @date 2020-05-06 13:06:07
      */
     void del(byte[] key);
@@ -118,7 +118,7 @@ public interface RedisService {
      *
      * @param key
      * @return void
-     * @author 西野
+     * @author ace
      * @date 2020-05-06 13:06:07
      */
     void del(String key);
@@ -128,7 +128,7 @@ public interface RedisService {
      *
      * @param
      * @return void
-     * @author 西野
+     * @author ace
      * @date 2020-05-06 13:06:07
      */
     void flushDB();
@@ -138,7 +138,7 @@ public interface RedisService {
      *
      * @param
      * @return java.lang.Long
-     * @author 西野
+     * @author ace
      * @date 2020-05-06 13:06:07
      */
     Long dbSize();
@@ -148,7 +148,7 @@ public interface RedisService {
      *
      * @param pattern
      * @return java.util.Set<byte[]>
-     * @author 西野
+     * @author ace
      * @date 2020-05-06 13:06:07
      */
     Set<byte[]> keys(String pattern);

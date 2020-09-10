@@ -3,7 +3,7 @@ package com.ace.secretscript.common.util;
 import java.lang.reflect.Field;
 
 /**
- * @author 西野
+ * @author ace
  * @version V1.0
  * @title ReflectHelper.java
  * @package com.xiye.common.util
@@ -16,7 +16,7 @@ public final class ReflectHelper {
         throw new IllegalStateException("Utility class");
     }
     /**
-     * @Author 西野
+     * @Author ace
      * @Date 2020-03-27 16:31:58
      * @Description 获取obj对象fieldName的Field
      * @Param [obj, fieldName]
@@ -34,7 +34,7 @@ public final class ReflectHelper {
     }
 
     /**
-     * @Author 西野
+     * @Author ace
      * @Date 2020-03-27 16:32:09
      * @Description 获取obj对象fieldName的属性值
      * @Param [obj, fieldName]
@@ -56,7 +56,7 @@ public final class ReflectHelper {
     }
 
     /**
-     * @Author 西野
+     * @Author ace
      * @Date 2020-03-27 16:32:18
      * @Description 设置obj对象fieldName的属性值
      * @Param [obj, fieldName, value]

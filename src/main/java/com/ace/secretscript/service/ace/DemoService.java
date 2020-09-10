@@ -9,4 +9,6 @@ public interface DemoService {
     List<Demo> getList(Demo demo);
 
     int insert(Demo demo);
+
+    List<Demo> getDataFromDB();
 }

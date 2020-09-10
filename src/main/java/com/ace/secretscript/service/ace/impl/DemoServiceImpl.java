@@ -13,7 +13,7 @@ import java.util.List;
 @Transactional(rollbackFor = Exception.class)
 public class DemoServiceImpl implements DemoService {
 
-    @Autowired
+    @Autowired(required = false)
     private DemoMapper demoMapper;
 
     @Override
@@ -26,5 +26,10 @@ public class DemoServiceImpl implements DemoService {
     public int insert(Demo demo) {
         int i = this.demoMapper.insert(demo);
         return i;
+    }
+
+    @Override
+    public List<Demo> getDataFromDB() {
+        return this.demoMapper.getDataFormDB();
     }
 }

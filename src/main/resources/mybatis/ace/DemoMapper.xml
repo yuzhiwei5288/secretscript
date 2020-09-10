@@ -48,4 +48,12 @@
         )
     </insert>
 
+    <select id="getDataFormDB" resultType="demo">
+        SELECT
+        <include refid="aceDemoColumns"></include>
+        FROM
+        <include refid="aceDemo"></include>
+        WHERE
+        1=1
+    </select>
 </mapper>

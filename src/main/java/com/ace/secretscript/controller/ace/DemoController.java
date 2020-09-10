@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -35,12 +36,12 @@ public class DemoController {
     @GetMapping("demo")
     public String getDemo(Demo demo) {
         String jsonDemo = JSON.toJSONString(demo);
-        redisService.set("jsonDemo",jsonDemo);
+        redisService.set("jsonDemo", jsonDemo);
         String stringDemo = demo.toString();
         System.out.println(stringDemo);
         System.out.println(jsonDemo);
         List<Demo> list = this.demoService.getList(demo);
-        redisService.set("demoList",JSON.toJSONString(list));
+        redisService.set("demoList", JSON.toJSONString(list));
         return list.toString();
     }
 
@@ -53,14 +54,14 @@ public class DemoController {
         return "添加成功";
     }
 
-    @GetMapping("jump")
+    @GetMapping("iscjump")
     public void jumpToCenter(HttpServletRequest request, HttpServletResponse reponse) {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
-        String flag = request.getParameter("flag");
+        String flag = request.getParameter("flag") == null ? "" : request.getParameter("flag");
 
         try {
-            if (REQUEST_FLAG.equals(flag)) {
+            if (flag.equals(REQUEST_FLAG)) {
                 reponse.sendRedirect("http://localhost:6789/#/login?username=" + username + "&password=" + password);
             } else {
                 reponse.sendRedirect("http://localhost:6789/#/login?username=" + username);
@@ -70,5 +71,14 @@ public class DemoController {
 //            e.printStackTrace();
         }
     }
+
+    @GetMapping("demodb")
+    public String demodb() {
+        HashMap<String, Object> map = new HashMap<>();
+        List<Demo> list = this.demoService.getDataFromDB();
+        String jsonDemoList = JSON.toJSONString(list);
+        return jsonDemoList;
+    }
+
 
 }

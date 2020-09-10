@@ -11,4 +11,6 @@ public interface DemoMapper {
     List<Demo> getList(Demo demo);
 
     int insert(Demo demo);
+
+    List<Demo> getDataFormDB();
 }
